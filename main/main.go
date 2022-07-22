@@ -8,5 +8,5 @@ import (
 func main() {
 	mappings.CreateUrlMappings()
 	// Listen and server on 0.0.0.0:8080
-	_ = mappings.Router.Run(":8080")
+	mappings.Router.Run(":8085")
 }
