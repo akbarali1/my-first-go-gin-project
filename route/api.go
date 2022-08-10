@@ -9,7 +9,6 @@ var Router *gin.Engine
 
 func CreateUrlMappings() {
 	Router = gin.Default()
-
 	Router.Use(Controllers.Cors())
 	// v1 of the API
 	v1 := Router.Group("/v1")
