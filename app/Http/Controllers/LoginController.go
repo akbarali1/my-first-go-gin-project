@@ -51,7 +51,7 @@ func LoginPost(c *gin.Context) {
 			"token": token,
 		})
 	} else {
-		c.JSON(http.StatusUnauthorized, nil)
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
 	}
 }
 
@@ -173,4 +173,8 @@ func UpdateUser(c *gin.Context) {
 	} else {
 		c.JSON(404, gin.H{"error": "user not found"})
 	}
+}
+
+func LoginGet(c *gin.Context) {
+	c.JSON(200, gin.H{"status": "ok"})
 }

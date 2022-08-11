@@ -13,7 +13,8 @@ func CreateUrlMappings() {
 	// v1 of the API
 	v1 := Router.Group("/v1")
 	{
-		v1.GET("/login", Controllers.LoginPost)
+		v1.GET("/login", Controllers.LoginGet)
+		v1.POST("/login", Controllers.LoginPost)
 		v1.GET("/users/:id", Controllers.GetUserDetail)
 		v1.GET("/users/", Controllers.GetUser)
 		v1.GET("/hello/", Controllers.Hello)
